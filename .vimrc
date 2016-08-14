@@ -21,6 +21,8 @@ nnoremap <silent><CR> :noh<CR>
 nnoremap <F5> :GundoToggle<CR>
 let g:gundo_right = 1
 
+nmap <F6> :TagbarToggle<CR>
+
 "To insert the answer to a mathematical equation type (in insert mode) "C-r="
 "and then the equation.
 
@@ -49,4 +51,8 @@ Plug 'sjl/gundo.vim'
 Plug 'beloglazov/vim-online-thesaurus'
 
 Plug 'ludovicchabant/vim-gutentags'
+Plug 'scrooloose/syntastic'
+Plug 'tpope/vim-fugitive'
+Plug 'majutsushi/tagbar'
+
 call plug#end()

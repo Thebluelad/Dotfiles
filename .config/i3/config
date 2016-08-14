@@ -309,4 +309,3 @@ exec VBoxClient-all
 exec_always "xset r rate 200"
 exec_always "setxkbmap -option caps:escape &"
 
-
