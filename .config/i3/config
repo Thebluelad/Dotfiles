@@ -306,5 +306,7 @@ bindsym Shift+XF86PowerOff exec "systemctl hibernate"
 exec VBoxClient-all
 
 #In case I need to change the keyboard repeat rate again.
-#xset r rate 200
+exec_always "xset r rate 200"
+exec_always "setxkbmap -option caps:escape &"
+
 
