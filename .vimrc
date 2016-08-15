@@ -2,6 +2,7 @@ syntax on
 set smartindent
 set number
 set tabstop=4
+set shiftwidth=4
 set ruler
 set laststatus=2
 set hlsearch
@@ -56,3 +57,15 @@ Plug 'tpope/vim-fugitive'
 Plug 'majutsushi/tagbar'
 
 call plug#end()
+
+"Some recommended settings for Syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+"End of recommended settings for Syntastic
+
