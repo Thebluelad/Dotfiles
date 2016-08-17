@@ -45,7 +45,7 @@ bindsym $mod+g exec google-chrome-stable --force-device-scale-factor=1.75
 bindsym $mod+n exec nautilus
 
 # Start Steam
-bindsym $mod+c exec steam # --force-device-scale-factor=2 (Pretty sure this has no effect)
+bindsym $mod+b exec steam # --force-device-scale-factor=2 (Pretty sure this has no effect)
 
 # Start Spotify
 bindsym $mod+m exec spotify --force-device-scale-factor=1.5
@@ -116,7 +116,7 @@ bindsym $mod+space focus mode_toggle
 bindsym $mod+a focus parent
 
 # focus the child container
-#bindsym $mod+d focus child
+bindsym $mod+c focus child
 
 set $workspace1 "1"
 set $workspace2 "2 "
@@ -198,7 +198,7 @@ bar {
 	position top
 	colors {
 	       background #000000
-	       statusline #808080 #33aaff
+	       statusline #c5c5c5 #33aaff
 	       focused_workspace #ffffff #121f42
 	       active_workspace #11aaff #00550
 	       urgent_workspace #ffffff #008ca1
@@ -268,7 +268,7 @@ exec steam
 assign [class="Pidgin"] $workspace9
 exec pidgin
 
-assign [class="Gnome-terminal"] $workspace4
+#assign [class="Gnome-terminal"] $workspace4
 assign [class="Discord"] $workspace9
 assign [class="google-chrome"] $workspace2
 #exec discord --force-device-scale-factor=1.5
@@ -307,5 +307,5 @@ exec VBoxClient-all
 
 #In case I need to change the keyboard repeat rate again.
 exec_always "xset r rate 200"
-exec_always "setxkbmap -option caps:escape &"
-
+#Swaps the caps lock and escape key functionality (Great for VIM)
+exec_always "setxkbmap -option caps:swapescape &"
