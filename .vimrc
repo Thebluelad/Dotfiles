@@ -18,8 +18,10 @@ set mouse=a
 set bg=dark
 set undofile
 set scrolloff=2
-set backupdir=./.backup,.,/tmp
-set directory=.,./.backup,/tmp
+set undodir=~/.vim/.undo//
+set backupdir=~/.vim/.backup//
+set directory=~/.vim/.swp//
+
 :let mapleader = "\<Space>"
 
 "Removes the highlight after a search by pressing enter again.
