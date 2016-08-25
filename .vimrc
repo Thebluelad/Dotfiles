@@ -1,4 +1,5 @@
 syntax on
+
 set smartindent
 set number
 set tabstop=2
@@ -21,8 +22,17 @@ set scrolloff=2
 set undodir=~/.vim/.undo//
 set backupdir=~/.vim/.backup//
 set directory=~/.vim/.swp//
+"Sets the auto increments to deal with decimals rather than octal numbers
+set nrformats=
+set t_Co=256
 
 :let mapleader = "\<Space>"
+let g:airline#extensions#whitespace#enabled = 0
+let g:airline#extensions#whitespace#mixed_indent_algo = 0
+
+"Remaps Q to run the current line as a command and replace the line with the
+"output
+noremap Q !!sh<CR>
 
 "Removes the highlight after a search by pressing enter again.
 nnoremap <silent><CR> :noh<CR>
@@ -53,7 +63,7 @@ Plug 'tpope/vim-sensible'
 
 "Could potentially lose this plugin for Omnicomplete functionality instead
 "(C-X C-O)
-Plug 'Valloric/YouCompleteme'
+"Plug 'Valloric/YouCompleteme'
 
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
@@ -66,22 +76,25 @@ Plug 'sjl/gundo.vim'
 Plug 'beloglazov/vim-online-thesaurus'
 
 Plug 'ludovicchabant/vim-gutentags'
-Plug 'scrooloose/syntastic'
+"Plug 'scrooloose/syntastic'
 Plug 'tpope/vim-fugitive'
 Plug 'majutsushi/tagbar'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'ervandew/supertab'
 
 call plug#end()
-
+let g:airline_theme='solarized'
 "Some recommended settings for Syntastic that seem to be fucking up my status
 "bar
 "set statusline+=%#warningmsg#
 "set statusline+=%{SyntasticStatuslineFlag()}
 "set statusline+=%*
 
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
+"let g:syntastic_always_populate_loc_list = 1
+"let g:syntastic_auto_loc_list = 1
+"let g:syntastic_check_on_open = 1
+"let g:syntastic_check_on_wq = 0
 "End of recommended settings for Syntastic
 
 " Function to set tabstop, softtabstop and shiftwidth to the same value
