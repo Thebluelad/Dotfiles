@@ -51,7 +51,7 @@ bindsym $mod+b exec steam # --force-device-scale-factor=2 (Pretty sure this has 
   bindsym $mod+m exec spotify --force-device-scale-factor=1.5
 
 # Start Discord
-  bindsym $mod+comma exec discord --force-device-scale-factor=1.5
+  bindsym $mod+comma exec discord-canary --force-device-scale-factor=1.5
 
 #Take a screenshot
   bindsym $mod+XF86KbdBrightnessDown exec scrot ~/Pictures/Screenshots/%b%d-%H:%M:%S.png # scrot ~/Pictures/Screenshots/%b%d-%H:%M:%S.png

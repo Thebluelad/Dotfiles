@@ -24,7 +24,7 @@ set scrolloff=2
 "set directory=~/.vim/.swp//
 "Sets the auto increments to deal with decimals rather than octal numbers
 set nrformats=
-set t_Co=256
+"set t_Co=256
 
 :let mapleader = "\<Space>"
 let g:airline#extensions#whitespace#enabled = 0
@@ -68,7 +68,9 @@ Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
 Plug 'christoomey/vim-system-copy'
-Plug 'wincent/command-t'
+Plug 'wincent/command-t', {
+      \   'do': 'cd ruby/command-t && ruby extconf.rb && make'
+      \ }
 Plug 'lervag/vimtex'
 Plug 'sjl/gundo.vim'
 
@@ -125,7 +127,7 @@ function! SummarizeTabs()
     endtry
 endfunction
 
-" Save your backups to a less annoying place than the current directory.
+" Save backups to a less annoying place than the current directory.
 " If you have .vim-backup in the current directory, it'll use that.
 " Otherwise it saves it to ~/.vim/backup or . if all else fails.
 if isdirectory($HOME . '/.vim/backup') == 0
@@ -138,7 +140,7 @@ set backupdir^=~/.vim/backup/
 set backupdir^=./.vim-backup/
 set backup
 
-" Save your swp files to a less annoying place than the current directory.
+" Save swp files to a less annoying place than the current directory.
 " If you have .vim-swap in the current directory, it'll use that.
 " Otherwise it saves it to ~/.vim/swap, ~/tmp or .
 if isdirectory($HOME . '/.vim/swap') == 0
