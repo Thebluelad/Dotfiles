@@ -269,7 +269,7 @@ assign [class="Pidgin"] $workspace9
 exec pidgin
 
 #assign [class="Gnome-terminal"] $workspace4
-assign [class="Discord"] $workspace9
+assign [class="discord"] $workspace9
 assign [class="google-chrome"] $workspace2
 #exec discord --force-device-scale-factor=1.5
 
