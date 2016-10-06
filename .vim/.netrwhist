@@ -1,5 +1,5 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =8
+let g:netrw_dirhist_cnt =9
 let g:netrw_dirhist_1='/home/matt/.files'
 let g:netrw_dirhist_2='/etc'
 let g:netrw_dirhist_3='/etc/acpi'
@@ -8,3 +8,4 @@ let g:netrw_dirhist_5='/etc/X11'
 let g:netrw_dirhist_6='/etc/X11/xorg.conf.d'
 let g:netrw_dirhist_7='/home/matt/Documents/CAB403/Prac4'
 let g:netrw_dirhist_8='/home/matt/catkin_ws/src/beginner_tutorials/include/beginner_tutorials'
+let g:netrw_dirhist_9='/home/matt/Documents/CAB403'
