@@ -51,6 +51,9 @@ nmap <Leader>q :wq<CR>
 "<Leader>K is Thesaurus
 "<Leader>t is Fuzzy Finder
 
+"Showing the first indent level of the file
+let g:indentLine_showFirstIndentLevel = 1
+
 filetype plugin indent on
 
 "Adds dot functionality to Visual mode

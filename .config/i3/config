@@ -140,8 +140,8 @@ bindsym $mod+b exec steam # --force-device-scale-factor=2 (Pretty sure this has 
   bindsym $mod+8 workspace $workspace8
   bindsym $mod+9 workspace $workspace9
   bindsym $mod+0 workspace $workspace10
-  bindsym $mod+bracketleft workspace prev_on_output
-  bindsym $mod+bracketright workspace next_on_output
+  bindsym $mod+minus workspace prev_on_output
+  bindsym $mod+equal workspace next_on_output
   bindsym $mod+BackSpace workspace back_and_forth
 
 # move focused container to workspace
@@ -281,9 +281,11 @@ assign [class="google-chrome"] $workspace2
 # set $urgent-bg-color     #E53935
 # bindsym $mod+d exec rofi -show run -lines 3 -eh 2 -width 100 -padding 800 -opacity "100" -bw 0 -bc "$bg-color" -bg "$bg-color" -fg "$text-color" -hlbg "$bg-color" -hlfg "#9575cd" -font "pango:DejaVu Sans Mono 18"
 
+bindsym $mod+bracketleft move container to workspace prev
+bindsym $mod+bracketright move container to workspace next
 
-#bindsym $mod+Shift+bracketleft move workspace to output left
-#bindsym $mod+Shift+bracketright move workspace to output right
+bindsym $mod+Shift+bracketleft move workspace to output left
+bindsym $mod+Shift+bracketright move workspace to output right
 
 # exec_always force_xinerama yes
 # exec_always --no-startup-id xrandr --output HDMI-0 --auto --left-of DVI-2
