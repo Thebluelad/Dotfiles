@@ -19,6 +19,8 @@ set mouse=a
 set bg=dark
 set undofile
 set scrolloff=2
+set foldmethod=indent
+set nofoldenable
 "set undodir=~/.vim/.undo//
 "set backupdir=~/.vim/.backup//
 "set directory=~/.vim/.swp//
@@ -59,6 +61,9 @@ filetype plugin indent on
 "Adds dot functionality to Visual mode
 vnoremap . :normal .<cr>
 
+"Toggle folds using Shift+Tab
+nnoremap <s-tab> za
+
 call plug#begin()
 Plug 'tpope/vim-sensible'
 " On-demand loading
@@ -89,6 +94,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'ervandew/supertab'
 Plug 'Yggdroot/indentLine'
 Plug 'godlygeek/tabular'
+Plug 'lervag/vimtex'
 
 call plug#end()
 let g:airline_theme='solarized'
